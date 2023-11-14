@@ -16,7 +16,6 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
     var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
     statusText.innerHTML = heartRateMeasurement.heartRate + ' &#x2764;';
     heartRates.push(heartRateMeasurement.heartRate);
-    drawWaves();
   });
 }
 
@@ -69,6 +68,5 @@ window.onresize = drawWaves;
 
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden) {
-    drawWaves();
   }
 });
